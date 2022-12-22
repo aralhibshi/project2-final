@@ -1,0 +1,49 @@
+<section class="flex">
+    <div id="authDiv" class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+
+        <div id="authSize" class="rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0 drop-shadow-lg">
+
+            <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                <img src="../images/AnimalBorder.webp" alt="BG" id="authBG" class="border-2 border-green-200">
+                <h1 id="authHeader" class="text-xl font-bold leading-tight tracking-tight text-white md:text-2xl">Create Account</h1>
+
+                <form class="space-y-4 md:space-y-6" method="POST" action="/auth/signup">
+
+                    <div class="flex flex-wrap">
+                        <div class="w-1/2 pr-1">
+                            <input type="text" name="firstName" class="drop-shadow-md bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="First Name" required>
+                        </div>
+
+                        <div class="w-1/2 pl-1">
+                            <input type="text" name="lastName" class="drop-shadow-md bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Last Name" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <input type="email" name="emailAddress" class="drop-shadow-md bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Email" required>
+                    </div>
+
+                    <div>
+                        <input type="password" name="password" placeholder="••••••••••••" class="drop-shadow-md bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required>
+                    </div>
+    
+                    <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                          <input id="terms" aria-describedby="terms" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300" required>
+                        </div>
+
+                        <div class="ml-3 text-sm">
+                          <label for="terms" class="font-medium text-white drop-shadow-lg">I accept the <a class="font-bold text-primary-600 hover:underline" href="/about/index">Terms and Conditions</a></label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="drop-shadow-md w-full bg-blue-700 text-white  hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center border-b-4 border-blue-500">Submit</button>
+
+                    <p id="authFooter" class="drop-shadow-lg text-center text-sm font-medium text-white">Already have an account? <a href="/auth/signin" class="text-center font-bold hover:underline">Click here</a>
+                    </p>
+                </form>
+
+            </div>
+        </div>
+    </div>
+  </section>

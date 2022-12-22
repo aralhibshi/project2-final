@@ -1,0 +1,16 @@
+<section class="flex justify-center">
+<div id="userBG" class="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 text-gray-100">
+	<a href="/user/edit"><img src="../images/editIconBlack.png" alt="Edit" id="editIcon" class="w-4 h-4"></a>
+	<img src="https://source.unsplash.com/150x150/?portrait?3" alt="" class="w-32 h-32 mx-auto rounded-full aspect-square border-4 border-gray-600 drop-shadow-lg">
+	<div class="flex space-y-4 text-center divide-y divide-gray-700">
+		<div class="my-2 space-y-1">
+			<h2 class="text-gray-700 text-xl font-semibold sm:text-2xl"><%= currentUser.firstName %> <%= currentUser.lastName %></h2>
+			<p class="px-5 text-xs sm:text-base dark:text-gray-500"><%= currentUser.emailAddress %></p>
+			
+			<br>
+		
+			<a href="/mypets/index" class="bg-gradient-to-r from-green-600 via-green-700 to-green-800 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 drop-shadow-lg">My Pets</a>
+		</div>
+	</div>
+</div>
+</section>

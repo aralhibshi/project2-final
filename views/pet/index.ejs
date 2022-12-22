@@ -1,0 +1,71 @@
+<section class="flex justify-center">
+    <div class="drop-shadow-lg w-10/12 overflow-x-auto relative shadow-md sm:rounded-lg mt-3 border-2 border-green-800 border-opacity-10">
+        <table class="w-full text-sm text-left text-gray-500 text-gray-400">
+            <img id="tableBG" src="../images/PaperBG.webp" alt="Table BG">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-900 bg-opacity-20">
+             <tr>
+                        <th scope="col" class="py-3 px-6">
+                             Name
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Animal
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Breed
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Age
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Gender
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            From
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Created At
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Updated At
+                        </th>
+                      </tr>
+            </thead>
+    <% pets.forEach(function(pet){ %>
+            <tbody>
+                <tr class=" border-b ">
+                    <th scope="row" class="py-4 px-6 font-bold text-gray-900 whitespace-nowrap hover:underline">
+                        <a href="/pet/details?id=<%= pet._id %>"><%= pet.name %> </a>
+    </th>
+                    <td class="py-4 px- text-gray-600">
+                                        <%= pet.animal %>
+    
+                    </td>
+                    <td class="py-4 px-6 text-gray-600">
+                                        <%= pet.breed %>
+     
+                    </td>
+                    <td class="py-4 px-6 text-gray-600">
+                    <%= pet.age %>
+                    </td>
+     </td>
+                    <td class="py-4 px-6 text-gray-600">
+                     <%= pet.gender %>
+                    </td>
+     </td>
+                    <td class="py-4 px-6 text-gray-600">
+                    <%= pet.from %>
+                    </td>
+    <td class="py-4 px-6 text-gray-600">
+        <%= moment(pet.createdAt).fromNow() %>                </td>
+    <td class="py-4 px-6 text-gray-600">
+        <%= moment(pet.updatedAt).fromNow() %>
+                    </td>
+                </tr>
+    
+                </tr>
+            </tbody>
+            <% }) %>
+        </table>
+    </div>
+    
+</section>

@@ -1,0 +1,42 @@
+<section class="flex justify-center">
+    <div class="drop-shadow-lg w-10/12 overflow-x-auto relative shadow-md sm:rounded-lg mt-3 border-2 border-green-800 border-opacity-10">
+        <table class="w-full text-sm text-left text-gray-500 text-gray-400">
+            <img id="tableBG" src="../images/PaperBG.webp" alt="Table BG">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-900 bg-opacity-20">
+             <tr>
+                        <th scope="col" class="py-3 px-6">
+                            Title
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Content
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Pets
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Article Created At
+                      </tr>
+            </thead>
+    <% articles.forEach(function(article){ %>
+            <tbody>
+                <tr class=" border-b">
+                <td class="py-4 px-6 font-bold text-gray-900 whitespace-nowrap hover:underline">
+                    <%= article.title %>
+    </td>
+                    <td class="py-4 px-6 text-gray-600">
+                                        <%= article.content %>
+                    </td>
+                    <td class="py-4 px-6 text-gray-600">
+                    <%= article.pet[0].name %>
+                    </td>
+     </td>
+    <td class="py-4 px-6 text-gray-600">
+        <%= moment(article.createdAt).fromNow() %>
+                    </td>
+                </tr>
+                </tr>
+            </tbody>
+            <% }) %>
+        </table>
+    </div>
+</section>

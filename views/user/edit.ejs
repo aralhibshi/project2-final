@@ -1,0 +1,42 @@
+<form method="POST" action="/user/update?_method=PUT">
+    <div class="mb-6">
+        <!-- <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">First Name</label> -->
+        <input type="text" name="firstName" value="<%= user.firstName %>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/4 p-2.5" placeholder="First Name" required>
+    </div>
+
+     <div class="mb-6">
+        <!-- <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Last Name</label> -->
+         <input type="text" name="lastName" value="<%= user.lastName %>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/4 p-2.5" placeholder="Last Name" required>
+    </div>
+
+    <div class="mb-6">
+        <!-- <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Email Address</label> -->
+        <input type="text" name="emailAddress" value="<%= user.emailAddress %>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/4 p-2.5" placeholder="Email" required>
+    </div> 
+
+    <div class="mb-6">
+        <!-- <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Password</label> -->
+        <input type="text" name="password" value="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/4 p-2.5" placeholder="Password" required>
+    </div> 
+
+    <div class="mb-6">
+        <!-- <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Country</label> -->
+        <input list="genders" name="gender" value="<%= pet.gender %>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/4 p-2.5" placeholder="Country" required>
+    </div> 
+
+    <div class="mb-6">
+        <!-- <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">From</label> -->
+        <input type="text" name="from" value="<%= pet.from %>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/4 p-2.5" placeholder="Bahrain" required>
+    </div> 
+
+    <div class="flex items-start mb-6">
+        <div class="flex items-center h-5">
+        <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300" required>
+        </div>
+        <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>.</label>
+    </div>
+    <input type="hidden" name="id" value="<%= pet._id %>"  class="form-control">
+    <br>
+    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
+
+</form>

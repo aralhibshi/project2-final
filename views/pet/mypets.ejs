@@ -1,0 +1,91 @@
+<% if (currentUser.pet.length == 0) { %>
+    <div class="">
+        <div class="flex justify-center">
+            <h1 class="text-center text-white drop-shadow-lg font-bold bg-gray-800 w-2/5 rounded-lg text-3xl">You do not have pets, please add one</h1>
+        </div>
+    </div>
+<% } else { %>
+
+<section class="flex justify-center">
+    <div class="drop-shadow-lg w-10/12 overflow-x-auto relative shadow-md sm:rounded-lg mt-3 border-2 border-green-800 border-opacity-10">
+        <table class="w-full text-sm text-left text-gray-500 text-gray-400">
+            <img id="tableBG" src="../images/PaperBG.webp" alt="Table BG">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-900 bg-opacity-20">
+             <tr>
+                        <th scope="col" class="py-3 px-6">
+                             Name
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Animal
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Breed
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Age
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Gender
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            From
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Created At
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Updated At
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Edit
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Delete
+                        </th>
+                      </tr>
+            </thead>
+    <% pets.forEach(function(pet){ %>
+            <tbody>
+                <tr class="border-b ">
+                    <th scope="row" class="py-4 px-6 font-bold text-gray-900 hover:underline whitespace-nowrap">
+                        <a href="/pet/details?id=<%= pet._id %>"><%= pet.name %> </a>
+    </th>
+                    <td class="py-4 px-6 text-gray-600">
+                                        <%= pet.animal %>
+                    </td>
+                    <td class="py-4 px-6 text-gray-600">
+                                        <%= pet.breed %>
+                    </td>
+                    <td class="py-4 px-6 text-gray-600">
+                    <%= pet.age %>
+                    </td>
+     </td>
+                    <td class="py-4 px-6 text-gray-600">
+                     <%= pet.gender %>
+                    </td>
+     </td>
+                    <td class="py-4 px-6 text-gray-600">
+                    <%= pet.from %>
+                    </td>
+    <td class="py-4 px-6 text-gray-600">
+                    Created Time
+                    </td>
+    <td class="py-4 px-6 text-gray-600">
+                    Updated Time
+                    </td>
+                    <td class="py-4 px-6 text-gray-600 hover:underline">
+                        <a href="/pet/edit?id=<%= pet._id %>">Edit</a>
+                    </td>
+     <td class="py-4 px-6 text-gray-600 hover:underline">
+                         <a href="/pet/delete?id=<%= pet._id %>">Delete</a>
+                    </td>
+                </tr>
+    
+                </tr>
+            </tbody>
+            <% }) %>
+        </table>
+    </div>
+</section>
+
+<% } %>

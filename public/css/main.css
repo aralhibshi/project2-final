@@ -1,0 +1,140 @@
+body {
+    min-height: 100vh;
+    
+}
+header {
+    text-align: center;
+    font-family: 'Irish Grover', cursive;
+    font-size: 30px;
+    text-shadow: 3px 3px black;
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 1%;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+footer > a {
+    display: inline;
+}
+
+#navigationBar > a {
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    padding: 0.6%;
+    background-color: rgba(129, 84, 0, 0.2);
+    border-radius: 20px;
+    text-shadow: 1px 1px black;
+    font-size: 16px;
+
+}
+
+#headerTitle {
+    font-size: 55px;
+    width: 20%;
+}
+
+.mainBG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    filter: brightness(100%) saturate(100%) contrast(80%);
+    /* filter: brightness(100%) saturate(42%) contrast(80%); original */
+}
+
+#hrLine {
+    border: 2px solid black;
+    opacity: 0.2;
+    border-radius: 15px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sliderImg {
+    font-family: 'Irish Grover', cursive;
+    z-index: -1;
+    filter: brightness(80%) saturate(75%) contrast(80%);
+    /* filter: brightness(75%) original */
+}
+
+#sliderText {
+    font-family: 'Irish Grover', cursive;
+    text-shadow: 1px 1px black;
+}
+
+#carousel {
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#authBG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    filter: brightness(75%);
+}
+
+#authHeader {
+    font-family: 'Irish Grover', cursive;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Setting size of Auth Div/Form in viewport */
+#authDiv {
+    height: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#authSize {
+    width: 80%;
+}
+
+#editIcon {
+    position: absolute;
+    right: 42%;
+    top: 24%;
+    filter: opacity(40%);
+}
+
+#imgFrame {
+    position: absolute;
+    width: 48%;
+    height: 45%;
+    left: 26%;
+    top: 19%;
+    z-index: 1;
+    filter: contrast(70%);
+}
+
+#tableBG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+}
+
+#userBG {
+    background-image: url("../images/PaperBG.webp");
+}
